@@ -11,10 +11,10 @@ before delete, after insert, after update, after delete, after undelete) {
             
         }
         when AFTER_INSERT {
-            ProductTriggerHelper.UpdateStandardPricebook(trigger.newMap, trigger.isInsert, trigger.isUpdate);
+            ProductTriggerHelper.addStandardPrice(trigger.newMap);
         }
         when AFTER_UPDATE {
-            ProductTriggerHelper.UpdateStandardPricebook(trigger.newMap, trigger.isInsert, trigger.isUpdate);
+            ProductTriggerHelper.updateStandardPrice(trigger.newMap);
         }
         when AFTER_DELETE {
             
