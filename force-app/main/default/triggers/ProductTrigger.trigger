@@ -11,6 +11,7 @@ before delete, after insert, after update, after delete, after undelete) {
             
         }
         when AFTER_INSERT {
+            ProductTriggerHelper.generateProductCode(trigger.new);
             ProductTriggerHelper.addStandardPrice(trigger.newMap);
         }
         when AFTER_UPDATE {
