@@ -1,0 +1,68 @@
+<!-- sldsValidatorIgnore -->
+<!-- <template>
+    <lightning-layout-item size="3">
+        <lightning-card class="slds-var-m-around_small">
+            <div class="slds-var-m-around_small slds-text-align_center">
+                <div class="slds-card__header">
+                    <img src="" alt="icon">
+                    <h1 class="title" title={product.Name}>{product.Name}</h1>
+                </div>
+                <div class="slds-card__body slds-card__body_inner slds-text-align_center">
+                    <p>{product.Brand__c}</p>
+                    <p>{product.Product_Type__c}</p>
+                    <b>${product.Standard_Unit_Price__c}</b>
+                    <p>{product.Availability__c}</p>
+                    <br>
+                    <lightning-button class="slds-align_absolute-center" label="See more"
+                        variant="brand">
+                    </lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </lightning-layout-item>
+</template> -->
+
+<template>
+    <lightning-card icon-name="standard:apex_plugin">
+        <template if:true={recordId}>
+            <span slot="title">{productName}</span>
+            <lightning-button-icon
+                icon-name="utility:expand_alt"
+                slot="actions"
+                onclick={handleNavigateToRecord}
+            ></lightning-button-icon>
+            <div class="slds-var-m-horizontal_medium">
+                <!-- <img
+                    if:true={productUrl}
+                    src=""
+                    class="product"
+                    alt="Product picture"
+                /> -->
+                <lightning-record-view-form
+                    record-id={recordId}
+                    onload={handleRecordUpdate}
+                    object-api-name="Product2"
+                    density="compact"
+                >
+                    <lightning-output-field
+                        field-name={familyField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={prodCodeField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={priceField}
+                    ></lightning-output-field>
+                    <!-- <lightning-output-field
+                        field-name={descriptionField}
+                    ></lightning-output-field> -->
+                </lightning-record-view-form>
+            </div>
+        </template>
+        <template if:false={recordId}>
+            <div class="slds-var-p-around_large">
+                <p class="placeholder">Select a product to see details</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
