@@ -1,18 +1,20 @@
-# Salesforce DX Project: Next Steps
+# Project 1: Slopes Store - A Client Facing Experience Site
+Requirements:
+Tasked with creating a compelling experience from a created business model, create an individual project with Lightning web components as the primary user interface. These are surfaced through the use of Experience Cloud to create a customer or partner experience site that allows for the use of these new features, along with supporting Apex classes/triggers and declarative customizations.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+To create this project I modeled the business after a online winter sports retailer named Slops, which sells all things related to winter sports such as skiis, snowboards, and other related outdoor gear. The customer can sign up using a client-facing experience site where they can browse available products, displayed through custom LWCs.
 
-## How Do You Plan to Deploy Your Changes?
+Roles/Responsibilities
+ - Developed a business to model
+ - Created LWC components to use on the experience site
+ - Created a client-facing experience site
+ - Developed Apex class to be used in conjunction with the components and the org data
+ - Developed Apex triggers for the business that meet best practices
+ - Implemented Sales and Service Cloud
+ - Included Assignment Rules, Auto-Response Rules, Escalation Rules, and Campaigns from the cloud apps
+ - Additional declarative customization to support the above features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Experience Site Preview
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+![p1preview](https://user-images.githubusercontent.com/62946799/155573480-028a212f-3619-4c32-95e7-e9303b892d27.png)
+![p1preview2](https://user-images.githubusercontent.com/62946799/155573484-f6d0f460-c7cd-469c-89a6-697e20411e23.png)
